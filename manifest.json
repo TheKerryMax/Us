@@ -1,8 +1,0 @@
-{
-"name": "Our Love Hub",
-"short_name": "LoveHub",
-"start_url": ".",
-"display": "standalone",
-"background_color": "#ffffff",
-"theme_color": "#e11d48"
-}
