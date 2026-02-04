@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Plus+Jakarta+Sans:wght@400;600&display=swap');
+
+body{
+margin:0;
+background:#1a1a1a;
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+font-family:'Plus Jakarta Sans',sans-serif;
+}
+
+#phone{
+width:720px;
+height:1612px;
+background:#fffafb;
+border-radius:60px;
+border:12px solid #2d2d2d;
+overflow:hidden;
+position:relative;
+display:flex;
+flex-direction:column;
+transform:scale(.45);
+}
+
+.dark #phone{background:#111}
+
+.romantic-title{font-family:'Dancing Script',cursive}
+
+.header{
+display:flex;
+justify-content:space-between;
+padding:20px;
+}
+
+.glass{background:rgba(255,255,255,.8)}
+.dark .glass{background:rgba(0,0,0,.6)}
+
+.drawer{
+position:absolute;
+right:0;
+top:0;
+height:100%;
+width:80%;
+background:white;
+padding:20px;
+transition:transform .3s;
+}
+.dark .drawer{background:#1a1a1a}
+
+.drawer.closed{transform:translateX(100%)}
+
+.overlay{
+position:absolute;
+inset:0;
+background:rgba(0,0,0,.3);
+}
+
+.chatbar{
+display:flex;
+padding:10px;
+background:white;
+}
+.chatbar input{flex:1}
+
+.nav{
+display:flex;
+justify-content:space-around;
+padding:10px;
+background:white;
+}
+
+.center{
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+height:100%;
+}
+
+.pulse-heart{
+font-size:80px;
+animation:pulse 1s infinite;
+}
+@keyframes pulse{50%{transform:scale(1.2)}}
+
+.btn{
+background:#e11d48;
+color:white;
+padding:10px 20px;
+border-radius:999px;
+}

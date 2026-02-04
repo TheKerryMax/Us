@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Love Hub</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.json">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+<div id="phone">
+
+<!-- LOGIN -->
+<div id="login" class="absolute inset-0 flex flex-col items-center justify-center text-white z-50">
+<div class="pulse-heart">❤️</div>
+<h2 class="romantic-title text-8xl mb-6">Our Space</h2>
+<button onclick="enterApp()" class="enter-btn">Enter Our World</button>
+</div>
+
+<!-- HEADER -->
+<header class="glass header">
+<h1 id="view-title" class="romantic-title text-6xl text-rose-500">Chat</h1>
+<button onclick="toggleProfile(true)">
+<i data-lucide="user"></i>
+</button>
+</header>
+
+<!-- DRAWERS -->
+<div id="overlay" onclick="closeDrawers()" class="overlay hidden"></div>
+
+<div id="profile" class="drawer closed">
+<h2 class="romantic-title text-5xl mb-6">Profile</h2>
+<button onclick="toggleSettings(true)" class="menu-btn">Settings</button>
+<button onclick="location.reload()" class="menu-btn gray">Log Out</button>
+</div>
+
+<div id="settings" class="drawer closed">
+<button onclick="toggleSettings(false)">← Back</button>
+<h2 class="romantic-title text-5xl mb-6">Settings</h2>
+
+<label class="flex justify-between items-center">
+Dark Mode
+<input type="checkbox" onchange="toggleDark(this)">
+</label>
+</div>
+
+<!-- MAIN -->
+<main id="main">
+
+<section id="chat-view"></section>
+<section id="gallery-view" class="hidden"></section>
+<section id="plan-view" class="hidden"></section>
+<section id="game-view" class="hidden center">
+<h2 class="romantic-title text-6xl mb-6">Tap Hearts</h2>
+<button onclick="spawnHeart()" class="btn">❤️ Tap</button>
+<div id="hearts"></div>
+</section>
+
+</main>
+
+<!-- CHAT BAR -->
+<div id="chatbar" class="chatbar">
+<input id="chatInput" placeholder="Send love...">
+<button onclick="sendMsg()">❤️</button>
+</div>
+
+<!-- NAV -->
+<nav class="nav">
+<button onclick="switchTab('chat')">Chat</button>
+<button onclick="switchTab('gallery')">Moments</button>
+<button onclick="switchTab('plan')">Plans</button>
+<button onclick="switchTab('game')">Play</button>
+</nav>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
